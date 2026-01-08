@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About — JUSTSILVER</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        @font-face {
+            font-family: 'Humane';
+            src: url('humane-bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #272727;
+            font-family: 'Humane', sans-serif;
+        }
+
+        body {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        .container {
+            height: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            text-align: center;
+        }
+
+        /* Back button */
+        .back {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            font-size: 32px;
+            color: #C589E8;
+            text-decoration: none;
+            border: 1px solid #C589E8;
+            padding: 4px 14px;
+            border-radius: 999px;
+        }
+
+        img.logo {
+            max-width: 110px;
+            height: auto;
+        }
+
+        /* Outlined title */
+        .title {
+            font-size: 96px;
+            color: transparent;
+            -webkit-text-stroke: 1.5px #C589E8;
+            letter-spacing: 2px;
+        }
+
+        /* Outlined body text */
+        .about-text {
+            font-size: 48px;
+            color: transparent;
+            -webkit-text-stroke: 1.2px #C589E8;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+
+        /* Filled closing line */
+        .closing {
+            margin-top: 16px;
+            font-size: 48px;
+            color: #C589E8;
+            letter-spacing: 1.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back transition-link">← Back</a>
+
+    <div class="container">
+        <img src="logo.png" alt="JUSTSILVER Logo" class="logo">
+
+        <div class="title">ABOUT US</div>
+
+        <div class="about-text">
+            JUSTSILVER IS BUILT ON THE IDEA THAT PRICE, CRAFT,
+            AND VALUE SHOULD SPEAK FOR THEMSELVES.
+            NO EXCESS. NO COMPROMISE.
+        </div>
+
+        <div class="closing">
+            FAIR. JUST. SILVER.
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        document.querySelectorAll('.transition-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                document.body.classList.remove('loaded');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400);
+            });
+        });
+    </script>
+</body>
+</html>
