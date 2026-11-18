@@ -1,111 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JUSTSILVER</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="logo.png">
-
-    <style>
-        @font-face {
-            font-family: 'Humane';
-            src: url('humane-bold.otf') format('opentype');
-            font-weight: bold;
-            font-style: normal;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            background-color: #272727;
-            background-image: url('WebsiteGradient.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: 'Humane', sans-serif;
-        }
-
-        body {
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            overflow: hidden;
-        }
-
-        body.loaded {
-            opacity: 1;
-        }
-
-        .container {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 18px;
-        }
-
-        img.logo {
-            max-width: 110px;
-            height: auto;
-        }
-
-        .title {
-            font-size: 96px;
-            color: #FFFFFF;
-            letter-spacing: 2px;
-        }
-
-        .spacer {
-            height: 32px;
-        }
-
-        .button {
-            font-size: 96px;
-            text-decoration: none;
-            color: transparent;
-            -webkit-text-stroke: 1.5px #FFFFFF;
-            letter-spacing: 2px;
-            transition: color 0.2s ease;
-        }
-
-        .button:hover {
-            color: #FFFFFF;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover vintage sterling silver jewelry from JustSilver. Shop our finds on eBay, Etsy, and Depop.">
+  <meta name="theme-color" content="#272727">
+  <title>JustSilver — Vintage Sterling Silver</title>
+  <link rel="icon" href="mark.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="brand-font.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="hero-art.js" defer></script>
+  <script src="site.js" defer></script>
 </head>
+<body class="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand" href="index.html" aria-label="JustSilver home">
+      <img src="mark.png" alt="" width="36" height="36">
+      <span>JUSTSILVER</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a class="nav-shop" href="#shops">Find a shop <span aria-hidden="true">↓</span></a>
+    </nav>
+  </header>
 
-<body>
-    <div class="container">
-        <img src="logo.png" alt="JUSTSILVER Logo" class="logo">
-        <div class="title">JUSTSILVER</div>
-        <div class="spacer"></div>
-
-        <a href="https://www.ebay.com/str/rsrteile" class="button" target="_blank">STORE</a>
-        <a href="https://www.instagram.com/justsilverstore/" class="button" target="_blank">INSTAGRAM</a>
-        <a href="about.html" class="button transition-link">ABOUT US</a>
+  <main id="main">
+    <div class="space-intro">
+      <canvas class="space-field" aria-hidden="true"></canvas>
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Vintage sterling silver</p>
+          <h1 id="hero-title"><span>SILVER</span><br>WORTH KEEPING.</h1>
+          <p class="hero-description">Vintage jewelry with a life before yours.</p>
+          <a class="button" href="#shops">Explore the shops <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art">
+          <svg class="bracelet-cutout" width="0" height="0" aria-hidden="true" focusable="false">
+            <clipPath id="bracelet-cutout" clipPathUnits="objectBoundingBox">
+              <!-- The outline follows the bracelet in the 1448 × 1086 source photo. -->
+              <path transform="scale(.000690607735 .000920810313)" d="
+                M 762 262
+                C 1015 262 1268 357 1270 487
+                C 1277 587 1158 642 1012 653
+                C 857 662 734 698 704 817
+                C 699 846 668 842 670 815
+                C 684 702 803 626 997 614
+                C 1135 605 1239 563 1235 489
+                C 1232 386 1019 300 762 302
+                C 496 304 211 379 207 476
+                C 204 559 339 617 491 618
+                C 606 617 698 573 704 463
+                C 704 441 728 436 740 449
+                C 751 462 742 496 734 517
+                C 702 624 590 659 493 660
+                C 327 661 170 581 170 484
+                C 166 372 444 268 762 262 Z"/>
+            </clipPath>
+          </svg>
+          <div class="bracelet-float">
+            <img class="hero-bracelet" src="silver-bracelet.webp" width="1448" height="1086"
+              alt="Open silver bracelet with sweeping, asymmetrical ends" fetchpriority="high">
+          </div>
+        </div>
+      </section>
     </div>
 
-    <script>
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-        });
+    <section id="shops" class="shops shell" aria-labelledby="shops-title" tabindex="-1">
+      <div class="section-heading">
+        <h2 id="shops-title">FIND US IN THREE PLACES.</h2>
+        <p>Pick your favorite marketplace to see what’s in store.</p>
+      </div>
+      <ul class="shop-list">
+        <li><a class="shop-card" href="https://www.ebay.com/str/rsrteile">
+          <span class="shop-name">eBay</span>
+          <span class="shop-arrow" aria-hidden="true">↗</span>
+        </a></li>
+        <li><a class="shop-card" href="https://www.etsy.com/shop/JustSilverCompany">
+          <span class="shop-name">Etsy</span>
+          <span class="shop-arrow" aria-hidden="true">↗</span>
+        </a></li>
+        <li><a class="shop-card" href="https://www.depop.com/justsilvercompany/">
+          <span class="shop-name">Depop</span>
+          <span class="shop-arrow" aria-hidden="true">↗</span>
+        </a></li>
+      </ul>
+    </section>
+  </main>
 
-        document.querySelectorAll('.transition-link').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                const href = link.getAttribute('href');
-                document.body.classList.remove('loaded');
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 400);
-            });
-        });
-    </script>
+  <footer class="site-footer shell">
+    <p>Fair. Just. Silver.</p>
+    <nav aria-label="Footer navigation">
+      <a href="about.html">About JustSilver</a>
+      <a href="https://www.instagram.com/justsilverstore/">Instagram <span aria-hidden="true">↗</span></a>
+    </nav>
+  </footer>
 </body>
 </html>

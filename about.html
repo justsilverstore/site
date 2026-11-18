@@ -1,137 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About — JUSTSILVER</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="logo.png">
-
-    <style>
-        @font-face {
-            font-family: 'Humane';
-            src: url('humane-bold.otf') format('opentype');
-            font-weight: bold;
-            font-style: normal;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            background-color: #272727;
-            background-image: url('WebsiteGradient.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: 'Humane', sans-serif;
-        }
-
-        body {
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            overflow: hidden;
-        }
-
-        body.loaded {
-            opacity: 1;
-        }
-
-        .container {
-            height: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-            text-align: center;
-        }
-
-        /* Back button */
-        .back {
-            position: absolute;
-            top: 24px;
-            left: 24px;
-            font-size: 32px;
-            color: #FFFFFF;
-            text-decoration: none;
-            border: 1px solid #FFFFFF;
-            padding: 4px 14px;
-            border-radius: 999px;
-        }
-
-        img.logo {
-            max-width: 110px;
-            height: auto;
-        }
-
-        /* Outlined title */
-        .title {
-            font-size: 96px;
-            color: transparent;
-            -webkit-text-stroke: 1.5px #FFFFFF;
-            letter-spacing: 2px;
-        }
-
-        /* Outlined body text */
-        .about-text {
-            font-size: 48px;
-            color: transparent;
-            -webkit-text-stroke: 1.2px #FFFFFF;
-            line-height: 1.2;
-            letter-spacing: 1px;
-        }
-
-        /* Filled closing line */
-        .closing {
-            margin-top: 16px;
-            font-size: 48px;
-            color: #FFFFFF;
-            letter-spacing: 1.5px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About JustSilver, a vintage sterling silver jewelry shop.">
+  <meta name="theme-color" content="#272727">
+  <title>About — JustSilver</title>
+  <link rel="icon" href="mark.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="brand-font.css">
+  <link rel="stylesheet" href="site.css">
 </head>
-
 <body>
-    <a href="index.html" class="back transition-link">← Back</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand" href="index.html" aria-label="JustSilver home">
+      <img src="mark.png" alt="" width="36" height="36">
+      <span>JUSTSILVER</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="about.html" aria-current="page">About</a>
+      <a class="nav-shop" href="index.html#shops">Find a shop <span aria-hidden="true">↙</span></a>
+    </nav>
+  </header>
 
-    <div class="container">
-        <img src="logo.png" alt="JUSTSILVER Logo" class="logo">
+  <main id="main" class="shell">
+    <section class="about-panel" aria-labelledby="about-title">
+      <div class="about-copy">
+        <p class="eyebrow">About JustSilver</p>
+        <h1 id="about-title">FAIR. JUST. SILVER.</h1>
+        <p>JustSilver is built on the idea that price, craft, and value should speak for themselves. No excess. No compromise.</p>
+        <a class="button" href="index.html#shops">Explore the shops <span aria-hidden="true">↙</span></a>
+      </div>
+    </section>
+  </main>
 
-        <div class="title">ABOUT US</div>
-
-        <div class="about-text">
-            JUSTSILVER IS BUILT ON THE IDEA THAT PRICE, CRAFT,
-            AND VALUE SHOULD SPEAK FOR THEMSELVES.
-            NO EXCESS. NO COMPROMISE.
-        </div>
-
-        <div class="closing">
-            FAIR. JUST. SILVER.
-        </div>
-    </div>
-
-    <script>
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-        });
-
-        document.querySelectorAll('.transition-link').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                const href = link.getAttribute('href');
-                document.body.classList.remove('loaded');
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 400);
-            });
-        });
-    </script>
+  <footer class="site-footer shell">
+    <p>Fair. Just. Silver.</p>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="https://www.instagram.com/justsilverstore/">Instagram <span aria-hidden="true">↗</span></a>
+    </nav>
+  </footer>
 </body>
 </html>
