@@ -1,5 +1,4 @@
 const hero = document.querySelector(".hero");
-drawStarfield(document.querySelector(".space-field"));
 const bracelet = hero.querySelector(".hero-bracelet");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const tiltInput = window.matchMedia("(hover: hover) and (pointer: fine)");

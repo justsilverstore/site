@@ -44,3 +44,5 @@ function drawStarfield(canvas) {
 
   new ResizeObserver(render).observe(canvas);
 }
+
+drawStarfield(document.querySelector(".space-field"));

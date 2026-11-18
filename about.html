@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="About JustSilver, a vintage sterling silver jewelry shop.">
-  <meta name="theme-color" content="#272727">
+  <meta name="theme-color" content="#0e0c15">
   <title>About — JustSilver</title>
   <link rel="icon" href="mark.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&display=swap">
   <link rel="stylesheet" href="brand-font.css">
   <link rel="stylesheet" href="site.css">
+  <script src="hero-art.js" defer></script>
 </head>
-<body>
+<body class="about-page space-page">
+  <canvas class="space-field" aria-hidden="true"></canvas>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header shell">
     <a class="brand" href="index.html" aria-label="JustSilver home">
@@ -21,24 +23,28 @@
       <span>JUSTSILVER</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="about.html" aria-current="page">About</a>
+      <a href="index.html" aria-label="Back to JustSilver home"><span aria-hidden="true">←</span> Back</a>
       <a class="nav-shop" href="index.html#shops">Find a shop <span aria-hidden="true">↙</span></a>
     </nav>
   </header>
 
   <main id="main" class="shell">
     <section class="about-panel" aria-labelledby="about-title">
-      <div class="about-copy">
+      <div class="about-heading">
         <p class="eyebrow">About JustSilver</p>
-        <h1 id="about-title">FAIR. JUST. SILVER.</h1>
-        <p>JustSilver is built on the idea that price, craft, and value should speak for themselves. No excess. No compromise.</p>
-        <a class="button" href="index.html#shops">Explore the shops <span aria-hidden="true">↙</span></a>
+        <h1 id="about-title">SILVER WITH A <span>SECOND LIFE.</span></h1>
+      </div>
+      <div class="about-copy">
+        <p>JustSilver is an independent shop for vintage sterling silver jewelry. We select pieces for their design and craftsmanship, with an emphasis on fair pricing.</p>
+        <p>We want to make well-made vintage jewelry easier to find and give each piece a chance to be worn again.</p>
+        <p class="about-signoff">Fair. Just. Silver.</p>
+        <a class="button" href="index.html#shops">Explore the shops <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer shell">
-    <p>Fair. Just. Silver.</p>
+    <p>JustSilver</p>
     <nav aria-label="Footer navigation">
       <a href="index.html">Home</a>
       <a href="https://www.instagram.com/justsilverstore/">Instagram <span aria-hidden="true">↗</span></a>
